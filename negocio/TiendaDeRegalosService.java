@@ -99,20 +99,21 @@ public class TiendaDeRegalosService {
 
 
     public void agregarProducto(Producto producto) {
+        //invoca al metodo adecuado de productoDAO
         productoDAO.agregarProducto(producto);
        
     }
 
     public void eliminarProducto(String nombreProducto) {
-        productoDAO.eliminarProducto(nombreProducto);
+         //invoca al metodo adecuado de productoDAO
     }
 
     public Producto buscarProducto(String nombreProducto) {
-        return productoDAO.buscarProducto(nombreProducto);
+         //invoca al metodo adecuado de productoDAO
     }
 
     public MiColeccion<Producto> getProductos() {
-        return productoDAO.getProductos();
+         //invoca al metodo adecuado de productoDAO
 
     }
 
@@ -123,13 +124,10 @@ public class TiendaDeRegalosService {
         System.out.println("Número de productos:"+productos.tamanio());
 
         // Crear un nuevo arreglo de tipo Producto[]
-        Producto[] arregloProductos = new Producto[productos.tamanio()];
-        for (int i = 0; i < productos.tamanio(); i++) {
-            arregloProductos[i] = productos.obtener(i);
-        }
         
-        // Ordenar el arreglo
-        Util.ordenar(arregloProductos);
+        
+        // Ordenar el arreglo invocando a Util
+       
 
         // Limpiar la colección y volver a llenarla con los elementos ordenados
         productos.limpiar();
@@ -167,24 +165,10 @@ public class TiendaDeRegalosService {
     }
 
     public void actualizarPrecio(String nombreProducto, double nuevoPrecio) {
-        Producto producto = productoDAO.buscarProducto(nombreProducto);
-        if (producto != null) {
-            producto.setPrecio(nuevoPrecio);
-            productoDAO.actualizarProducto(producto);
-            System.out.println("Precio actualizado para " + nombreProducto + ": $" + nuevoPrecio);
-        } else {
-            System.out.println("Producto no encontrado: " + nombreProducto);
-        }
+       //coloca lo necesario
     }
     public void aplicarDescuento(String nombreProducto, double porcentaje) {
-        Producto producto = productoDAO.buscarProducto(nombreProducto);
-        if (producto != null) {
-            producto.aplicarDescuento(porcentaje);
-            productoDAO.actualizarProducto(producto);
-            System.out.println("Descuento aplicado a " + nombreProducto + ": " + porcentaje + "%");
-        } else {
-            System.out.println("Producto no encontrado: " + nombreProducto);
-        }
+        //coloca lo necesario
     }
 
     public void aplicarDescuentoATodos(double porcentaje) {
@@ -200,7 +184,7 @@ public class TiendaDeRegalosService {
         for (Producto producto : productos) {
             if (producto != null) {
                
-                total += producto.getPrecio();
+               //coloca lo necesario
             }
         }
         return total;
@@ -213,73 +197,53 @@ public class TiendaDeRegalosService {
         }
     }
 
-    public void agregarLibro(String idProducto, String nombre, double precio, String descripcion 
-                            ,String familia
-                            ,String autor, String editorial, int anioPublicacion, String genero, 
-                            int numeroPaginas, String isbn)  {
+    public void agregarLibro(//completa)  {
         Producto libro = new Libro(idProducto, nombre, precio, descripcion, familia,autor, editorial, 
                                 anioPublicacion, genero, numeroPaginas, isbn) ;
          
-        productoDAO.agregarProducto(libro);
+        
+        //Invoca a productoDAO para agregarLibro
     }
 
-    public void agregarCelular(String idProducto, String nombre, double precio, String descripcion
-                              ,String familia                          
-                              ,String marca, String modelo, String color, int garantia, String voltaje
-                              ,int numCamaras, String sistemaOperativo, int capacidadAlmacenamiento
-                              ,int ram, String tipoPantalla) {
+    public void agregarCelular(//completa) {
         Producto celular = new Celular(idProducto, nombre, precio, descripcion,familia
                                     ,marca, modelo, color, garantia, voltaje
                                     ,numCamaras, sistemaOperativo, capacidadAlmacenamiento
                                     ,ram, tipoPantalla);
-        productoDAO.agregarProducto(celular);
+         //Invoca a productoDAO para agregarCelular
     }
 
-    public void agregarTelevision(String idProducto, String nombre, double precio, String descripcion
-                                ,String familia
-                                ,String marca, String modelo, String color, int garantia, String voltaje
-                                ,String tamanio, String resolucion, String tipoPantalla) {
+    public void agregarTelevision(//completa) {
         Producto producto = new Television(idProducto, nombre, precio, descripcion,familia
                                             ,marca, modelo, color, garantia, voltaje
                                             ,tamanio,  resolucion, tipoPantalla);
-        productoDAO.agregarProducto(producto);
+         //Invoca a productoDAO para agregarTelevision
     }
 
-    public void agregarLicuadora(String idProducto, String nombre, double precio, String descripcion,
-                                String familia, 
-                                String marca, String modelo, String color, int garantia, String voltaje,
-                                 int potencia, int capacidad) {  
+    public void agregarLicuadora(//completa) {  
         Producto producto = new Licuadora(idProducto, nombre, precio, descripcion, familia, marca, modelo, color, 
                                          garantia, voltaje, potencia, capacidad);
-        productoDAO.agregarProducto(producto);
+         //Invoca a productoDAO para agregarLicuadora
     }
 
-    public void agregarTostadora(String idProducto, String nombre, double precio, String descripcion
-                                ,String familia
-                                ,String marca, String modelo, String color, int garantia, String voltaje
-                                ,int numRanuras) {
+    public void agregarTostadora(//completa) {
         Producto producto = new Tostadora(idProducto, nombre, precio,  descripcion,familia
                                         ,marca, modelo, color, garantia, voltaje
                                         ,numRanuras);
-        productoDAO.agregarProducto(producto);
+        //Invoca a productoDAO para agregarTostadora
     }
 
-    public void agregarCalculadora(String idProducto, String nombre, double precio, String descripcion
-                                    ,String familia
-                                    ,String marca, String modelo, String color, int garantia
-                                    ,String voltaje ,String tipo) {
+    public void agregarCalculadora(//completa) {
         Producto producto = new Calculadora(idProducto, nombre, precio, descripcion,familia
                                             ,marca, modelo, color, garantia
                                             ,voltaje ,tipo);
-        productoDAO.agregarProducto(producto);
+         //Invoca a productoDAO para agregarCalculadora
     }
 
-    public void agregarProductoPromocional(String idProducto, String nombre, double precio, String descripcion
-                                        ,String familia
-                                        ,String talla, String color) {
+    public void agregarProductoPromocional(//completa) {
         Producto producto = new Camisetapromocional(idProducto, nombre, precio, descripcion,familia
                                                     ,talla,color);
-        productoDAO.agregarProducto(producto);
+        //Invoca a productoDAO para agregarCamisetaPromocional
     }
 
     public String getRuta(){
@@ -369,149 +333,12 @@ public class TiendaDeRegalosService {
     }
 
     public String generarReporteProductosConEncabezadoNombre() throws IOException {
-        StringBuilder reporte = new StringBuilder();
-    
-        // Obtener la fecha actual
-        String fechaActual = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
-    
-        // Encabezado del reporte
-        reporte.append("=".repeat(130)).append("\n");
-        reporte.append("Titulo: Reporde de Productos ordenado por Nombre\n");
-        reporte.append(String.format("Reporte generado por: %s (%s)\n", nombreUsuario, emailUsuario));
-        reporte.append(String.format("ruta de trabajo: %s\n",ruta));
-        reporte.append(String.format("Fecha: %s\n", fechaActual));
-        reporte.append("=".repeat(130)).append("\n");
-    
-        // Encabezado de la tabla
-        reporte.append(String.format("%-10s %-40s %-10s %-20s %-15s\n", "ID", "Nombre", "Precio", "Descripción", "Familia"));
-        reporte.append("=".repeat(130)).append("\n");
-    
-        // Obtener y ordenar la lista de productos
-
-        MiColeccion<Producto> productos = productoDAO.getProductos();
-
-        System.out.println("Número de productos:"+productos.tamanio());
-
-        // Crear un nuevo arreglo de tipo Producto[]
-        Producto[] arregloProductos = new Producto[productos.tamanio()];
-        for (int i = 0; i < productos.tamanio(); i++) {
-            arregloProductos[i] = productos.obtener(i);
-        }
         
-        // Ordenar el arreglo
-        Util.ordenar(arregloProductos, new CriterioProductoNombre());
-
-        // Limpiar la colección y volver a llenarla con los elementos ordenados
-        productos.limpiar();
-        for (Producto producto : arregloProductos) {
-            productos.agregar(producto);
-        }
-
-        // Recorrer la lista de productos y agregar los detalles al reporte
-        int contadorProductos = 0;
-        int pagina = 1;
-        double totalPrecio = 0;
-    
-        for (int i = 0; i < productos.tamanio(); i++) {
-            Producto producto = productos.obtener(i);
-            reporte.append(String.format("%-10s %-40s %-10.2f %-20s %-15s\n",
-                    producto.getIdProducto(),
-                    producto.getNombre(),
-                    producto.getPrecio(),
-                    producto.getDescripcion(),
-                    producto.getFamilia()));
-    
-            totalPrecio+=producto.getPrecio();
-            contadorProductos++;
-    
-            // Agregar un pie de página cada 10 productos
-            if (contadorProductos % 10 == 0 || i == productos.tamanio() - 1) {
-                reporte.append("=".repeat(130)).append("\n");
-                reporte.append(String.format("Página %d\n", pagina));
-                reporte.append("=".repeat(130)).append("\n");
-                pagina++;
-            }
-        }
-        // Agregar el total de la columna "Precio" al final del reporte
-        reporte.append("\n");
-        reporte.append("=".repeat(130)).append("\n");
-        reporte.append(String.format("Total de precios: %.2f\n", totalPrecio));
-        reporte.append("=".repeat(130)).append("\n");
-    
-        return reporte.toString();
+        
     }
 
     public String generarReporteProductosConEncabezadoPrecio() throws IOException {
-        StringBuilder reporte = new StringBuilder();
-    
-        // Obtener la fecha actual
-        String fechaActual = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
-    
-        // Encabezado del reporte
-        reporte.append("=".repeat(130)).append("\n");
-        reporte.append("Titulo: Reporde de Productos ordenado por Precio\n");
-        reporte.append(String.format("Reporte generado por: %s (%s)\n", nombreUsuario, emailUsuario));
-        reporte.append(String.format("ruta de trabajo: %s\n",ruta));
-        reporte.append(String.format("Fecha: %s\n", fechaActual));
-        reporte.append("=".repeat(130)).append("\n");
-    
-        // Encabezado de la tabla
-        reporte.append(String.format("%-10s %-40s %-10s %-20s %-15s\n", "ID", "Nombre", "Precio", "Descripción", "Familia"));
-        reporte.append("=".repeat(130)).append("\n");
-    
-        // Obtener y ordenar la lista de productos
-
-        MiColeccion<Producto> productos = productoDAO.getProductos();
-
-        System.out.println("Número de productos:"+productos.tamanio());
-
-        // Crear un nuevo arreglo de tipo Producto[]
-        Producto[] arregloProductos = new Producto[productos.tamanio()];
-        for (int i = 0; i < productos.tamanio(); i++) {
-            arregloProductos[i] = productos.obtener(i);
-        }
         
-        // Ordenar el arreglo
-        Util.ordenar(arregloProductos, new CriterioProductoPrecio());
-
-        // Limpiar la colección y volver a llenarla con los elementos ordenados
-        productos.limpiar();
-        for (Producto producto : arregloProductos) {
-            productos.agregar(producto);
-        }
-
-        // Recorrer la lista de productos y agregar los detalles al reporte
-        int contadorProductos = 0;
-        int pagina = 1;
-        double totalPrecio = 0;
-    
-        for (int i = 0; i < productos.tamanio(); i++) {
-            Producto producto = productos.obtener(i);
-            reporte.append(String.format("%-10s %-40s %-10.2f %-20s %-15s\n",
-                    producto.getIdProducto(),
-                    producto.getNombre(),
-                    producto.getPrecio(),
-                    producto.getDescripcion(),
-                    producto.getFamilia()));
-    
-            totalPrecio+=producto.getPrecio();
-            contadorProductos++;
-    
-            // Agregar un pie de página cada 10 productos
-            if (contadorProductos % 10 == 0 || i == productos.tamanio() - 1) {
-                reporte.append("=".repeat(130)).append("\n");
-                reporte.append(String.format("Página %d\n", pagina));
-                reporte.append("=".repeat(130)).append("\n");
-                pagina++;
-            }
-        }
-        // Agregar el total de la columna "Precio" al final del reporte
-        reporte.append("\n");
-        reporte.append("=".repeat(130)).append("\n");
-        reporte.append(String.format("Total de precios: %.2f\n", totalPrecio));
-        reporte.append("=".repeat(130)).append("\n");
-    
-        return reporte.toString();
     }
 
 }

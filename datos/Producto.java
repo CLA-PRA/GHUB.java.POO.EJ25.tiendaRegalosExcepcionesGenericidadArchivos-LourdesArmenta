@@ -1,27 +1,24 @@
 package datos;
 import negocio.Vendible;
 
-public abstract class Producto implements Vendible, Comparable<Producto>{
+public abstract class Producto implements Vendible, Comparable<Producto> {
     private String idProducto;
     private String nombre;
     private double precio;
     private String descripcion;
-    private  String familia;
+    private String familia;
 
+    // Constructor vacío
     public Producto() {
-
-    }
-    public Producto(String idProducto, String nombre,  double precio,  
-                    String descripcion, String familia) {
-        this.idProducto = idProducto;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.familia = familia;
+        // TODO: Completar el constructor vacío si es necesario.
     }
 
-   
+    // Constructor parametrizado
+    public Producto(String idProducto, String nombre, double precio, String descripcion, String familia) {
+        // TODO: Implementar el constructor para inicializar los atributos.
+    }
 
+    // Getters y setters
     public String getIdProducto() {
         return idProducto;
     }
@@ -62,30 +59,30 @@ public abstract class Producto implements Vendible, Comparable<Producto>{
         this.familia = familia;
     }
 
-   
+    // Método toString
     @Override
     public String toString() {
-        return idProducto + "," + nombre + "," + precio + "," + descripcion+","+familia;
+        // TODO: Implementar este método para devolver una representación en texto del producto.
+        return null; // Retornar null temporalmente.
     }
 
-    
-    public  String obtenerDetalles(){
-        return "Producto : "+ idProducto + ", " + nombre + ", $" + precio + ", " + descripcion+", "+familia;
-
+    // Método obtenerDetalles
+    public String obtenerDetalles() {
+        // TODO: Implementar este método para devolver los detalles del producto.
+        return null; // Retornar null temporalmente.
     }
-    
 
+    // Métodos abstractos
     public abstract boolean aplicarDescuento(double porcentaje);
-    
 
     public abstract boolean esVendible();
 
+    public abstract String toArchivo();
+
+    // Método compareTo
     @Override
     public int compareTo(Producto o) {
-    
-        return this.getIdProducto().compareTo(o.getIdProducto());
+        // TODO: Implementar la comparación entre productos por idProducto.
+        return 0; // Retornar 0 temporalmente.
     }
-
-    public abstract String toArchivo();
-    
 }

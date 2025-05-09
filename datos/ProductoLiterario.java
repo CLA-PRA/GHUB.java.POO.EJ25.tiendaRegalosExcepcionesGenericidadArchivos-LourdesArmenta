@@ -1,95 +1,91 @@
 package datos;
 
+public abstract class ProductoElectronico extends Producto {
+    private String marca;
+    private String modelo;
+    private String color;
+    private int garantia;
+    private String voltaje;
+    final String familia = "ProductoElectronico";
 
-public class ProductoLiterario extends Producto {
-    private String autor;
-    private String editorial;
-    private int anioPublicacion;
-    private String genero;
-    private int numeroPaginas;
-    final String familia = "ProductoLiterario";
-    public ProductoLiterario(String idProducto, String nombre, double precio, String descripcion
-                        ,String familia
-                        ,String autor, String editorial, int anioPublicacion, String genero, int numeroPaginas) {
-        super(idProducto, nombre, precio, descripcion,familia);
-        this.autor = autor;
-        this.editorial = editorial;  
-        this.anioPublicacion = anioPublicacion;
-        this.genero = genero;
-        this.numeroPaginas = numeroPaginas;
+    public ProductoElectronico(String idProducto, String nombre, double precio, String descripcion,
+                                String familia, String marca, String modelo, String color, int garantia, String voltaje) {
+        super(idProducto, nombre, precio, descripcion, familia);
+        // TODO: Inicializar los atributos específicos de ProductoElectronico.
+    }
 
+    // Getters y setters
+    public String getMarca() {
+        return marca;
     }
-    public String getAutor() {
-        return autor;
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
-    public void setAutor(String autor) {
-        this.autor = autor;
+
+    public String getModelo() {
+        return modelo;
     }
-    public String getEditorial() {
-        return editorial;
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
+
+    public String getColor() {
+        return color;
     }
-    public int getAnioPublicacion() {
-        return anioPublicacion;
+
+    public void setColor(String color) {
+        this.color = color;
     }
-    public void setAnioPublicacion(int anioPublicacion) {
-        this.anioPublicacion = anioPublicacion;
+
+    public int getGarantia() {
+        return garantia;
     }
-    public String getGenero() {
-        return genero;
+
+    public void setGarantia(int garantia) {
+        this.garantia = garantia;
     }
-    public void setGenero(String genero) {
-        this.genero = genero;
+
+    public String getVoltaje() {
+        return voltaje;
     }
-    public int getNumeroPaginas() {
-        return numeroPaginas;
-    }
-    public void setNumeroPaginas(int numeroPaginas) {
-        this.numeroPaginas = numeroPaginas;
+
+    public void setVoltaje(String voltaje) {
+        this.voltaje = voltaje;
     }
 
     @Override
     public String obtenerDetalles() {
-        return super.toString()+", autor=" + autor + ", editorial=" + editorial+ ", anioPublicacion=" + anioPublicacion +  ", genero=" + genero
-                + ", numeroPaginas=" + numeroPaginas;
+        // TODO: Implementar este método para devolver los detalles del producto.
+        return null; // Retornar null temporalmente.
     }
 
     @Override
     public String toString() {
-        return super.toString()+"," + autor + "," +editorial+ ","+anioPublicacion + ","  + genero
-                + "," + numeroPaginas;
+        // TODO: Implementar este método para devolver una representación en texto del producto.
+        return null; // Retornar null temporalmente.
     }
 
     @Override
-    //a un producto literario se le puede aplicar un descuento de hasta el 80%
     public boolean aplicarDescuento(double porcentaje) {
-        if (porcentaje > 0 && porcentaje <=80)
-          return true;
-        else
-          return false;
+        // TODO: Implementar la lógica para aplicar un descuento de hasta el 20%.
+        return false; // Retornar false temporalmente.
     }
 
     @Override
     public boolean esVendible() {
-        return true;
+        // TODO: Implementar la lógica para determinar si el producto es vendible.
+        return false; // Retornar false temporalmente.
     }
 
-    
-    public String getFamilia(){
-        return "ProductoLiterario";
+    public String getFamilia() {
+        return familia;
     }
 
     @Override
     public String toArchivo() {
-        return getIdProducto() + "," +
-               getNombre() + "," +
-               getPrecio() + "," +
-               getDescripcion() + "," +
-               getFamilia();
+        // TODO: Implementar este método para devolver una representación en texto para guardar en un archivo.
+        return null; // Retornar null temporalmente.
     }
-
-    
-    
 }

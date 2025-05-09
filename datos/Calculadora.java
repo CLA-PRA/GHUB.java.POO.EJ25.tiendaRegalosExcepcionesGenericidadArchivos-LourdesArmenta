@@ -1,6 +1,7 @@
 package datos;
 
-public class Calculadora extends ProductoElectronico  {
+//la clase debe heredar de Producto Electronico
+public class Calculadora   {
     private String tipo;
     final String familia = super.getFamilia();
 
@@ -51,23 +52,12 @@ public class Calculadora extends ProductoElectronico  {
         return super.getFamilia();
     }
 
-    //sobreescritura del metodo obtenerDetalles de la clase ProductoElectronico y
-    //agregando el atributo tipo
-    @Override
-    public String obtenerDetalles() {
-        return super.obtenerDetalles()+"Calculadora [tipo=" + tipo + "]";
-    }
+    //TODO:sobreescritura del metodo obtenerDetalles de la clase ProductoElectronico y
+    //TODO:agregando el atributo tipo
+    
 
-    @Override
-    public boolean aplicarDescuento(double porcentaje) {
-        if (super.aplicarDescuento(porcentaje)){
-           this.setPrecio(this.getPrecio()-this.getPrecio()*(porcentaje/100));
-           return true;
-        }
-        else
-            return false;  
-         
-    }
+    // TODO: Implementar el método aplicarDescuento 
+   
 
     @Override
     public String toString() {

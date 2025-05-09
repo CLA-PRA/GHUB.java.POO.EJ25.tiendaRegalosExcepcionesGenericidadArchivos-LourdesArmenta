@@ -1,6 +1,7 @@
 package datos;
 
-public class Camisetapromocional extends ProductoPromocional {
+//La clase debe heredar de producto promecional
+public class Camisetapromocional  {
     private String talla;
     private String color;
     final String familia = super.getFamilia();
@@ -58,15 +59,11 @@ public class Camisetapromocional extends ProductoPromocional {
     }
 
 
-    @Override
-    public String obtenerDetalles() {
-        return super.obtenerDetalles() + ", Talla: " + talla + ", Color: " + color;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + "," + talla + "," + color;
-    }
+    // TODO: Sobrescribir el método obtenerDetalles para incluir talla y color
+    
+     // TODO: Sobrescribir el método toString para incluir talla y color 
+}
+   
 
     @Override
     public String toArchivo() {

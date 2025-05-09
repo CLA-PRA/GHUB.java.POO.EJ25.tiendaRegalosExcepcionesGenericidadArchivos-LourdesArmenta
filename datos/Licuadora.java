@@ -64,24 +64,14 @@ public class Licuadora extends ProductoElectroDomestico {
     }
 
     
-    @Override
+    
     //a un producto electrodomestico se le puede aplicar un descuento de hasta el 50%
-    public boolean aplicarDescuento(double porcentaje) {
-        if (super.aplicarDescuento(porcentaje)){
-            this.setPrecio(this.getPrecio()-this.getPrecio()*(porcentaje/100));
-            return true;
-         }
-         else
-             return false;  
-    }
+    // TODO: Implementar el método aplicarDescuento para validar descuentos de hasta el 50%.
+    
 
     //sobreescritura el metodos obtenerDetalles de la clase base ProductoElectronico
     //agregando los atributos potencia y capacidad
-    @Override
-    public String obtenerDetalles() {
-        
-        return super.obtenerDetalles()+"Licuadora [capacidad=" + capacidad + ", potencia=" + potencia + "]";
-    }
+    
 
     
 

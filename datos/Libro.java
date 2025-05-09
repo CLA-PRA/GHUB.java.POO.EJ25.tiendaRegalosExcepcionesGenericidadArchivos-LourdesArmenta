@@ -54,22 +54,12 @@ public class Libro extends ProductoLiterario {
 
     //sobreescritura del metodo obtenerDetalles de la clase ProductoLiterario y
     //agregando el atributo isbn
-    @Override
-    public String obtenerDetalles() {
-        return super.obtenerDetalles()+"Libro [isbn=" + isbn + "]";
-    }
+    
 
-    @Override
+   
+    //sobreescritura del metodo aplicarDescuento
     //a un producto literario se le puede aplicar un descuento de hasta el 80%
-    public boolean aplicarDescuento(double porcentaje) {
-        if (super.aplicarDescuento(porcentaje)){
-           this.setPrecio(this.getPrecio()-this.getPrecio()*(porcentaje/100));
-           return true;
-        }
-        else
-            return false;  
-         
-    }
+   
 
     @Override
     public String toString() {

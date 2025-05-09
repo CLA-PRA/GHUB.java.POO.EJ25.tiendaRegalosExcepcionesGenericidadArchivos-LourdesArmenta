@@ -1,46 +1,22 @@
 package datos;
 
-
-public class Television extends ProductoElectronico{
+public class Television extends ProductoElectronico {
     private String tamanio;
     private String resolucion;
     private String tipoPantalla;
     private final String familia = super.getFamilia();
 
-    public Television(String idProducto, String nombre, double precio, String descripcion, String familia
-                    ,String marca, String modelo, String color, int garantia, String voltaje
-                    ,String tamanio, String resolucion, String tipoPantalla)
-    {
-        super(idProducto, nombre, precio, descripcion, familia,marca, modelo, color, garantia, voltaje);
-        this.tamanio = tamanio;
-        this.resolucion = resolucion;
-        this.tipoPantalla = tipoPantalla;
+    public Television(String idProducto, String nombre, double precio, String descripcion, String familia,
+                      String marca, String modelo, String color, int garantia, String voltaje,
+                      String tamanio, String resolucion, String tipoPantalla) {
+        super(idProducto, nombre, precio, descripcion, familia, marca, modelo, color, garantia, voltaje);
+        // TODO: Inicializar los atributos específicos de Television.
     }
 
     public static Television fromString(String[] partes) {
-        if (partes.length < 13) {
-            throw new IllegalArgumentException("Datos incompletos para crear una Television");
-        }
-        try{
-        String idProducto = partes[0].trim();
-        String nombre = partes[1].trim();
-        double precio = Double.parseDouble(partes[2].trim());
-        String descripcion = partes[3].trim();
-        String familia = partes[4].trim();
-        String marca = partes[5].trim();
-        String modelo = partes[6].trim();
-        String color = partes[7].trim();
-        int garantia = Integer.parseInt(partes[8].trim());
-        String voltaje = partes[9].trim();
-        String tamanio = partes[10].trim();
-        String resolucion = partes[11].trim();
-        String tipoPantalla = partes[12].trim();
-        return new Television(idProducto, nombre, precio, descripcion, familia, marca, 
-                modelo, color, garantia, voltaje, tamanio, resolucion, tipoPantalla);
-        } catch (NumberFormatException e) {
-            System.err.println("Error al convertir número: " + e.getMessage());
-            throw e; // Re-lanzar la excepción para que pueda ser manejada en un nivel superior
-        }
+        // TODO: Implementar la lógica para crear un objeto Television a partir de un arreglo de Strings.
+        // Sugerencia: Validar que el arreglo tenga al menos 13 elementos y convertir los valores necesarios.
+        return null; // Retornar null temporalmente.
     }
 
     public String getTamanio() {
@@ -67,51 +43,33 @@ public class Television extends ProductoElectronico{
         this.tipoPantalla = tipoPantalla;
     }
 
-    //metodo getFamilia sobreescrito de la clase ProductoElectronico
-    @Override
-    public String getFamilia(){
-        return super.getFamilia();
-    }
-
-
-    //sobreescritura del metodo obtenerDetalles de la clase ProductoElectronico y
-    //agregando los atributos tamanio, resolucion y tipoPantalla
     @Override
     public String obtenerDetalles() {
-        return super.obtenerDetalles()+"Television 3resolucion=" + resolucion + ", tamanio=" + tamanio + ", tipoPantalla=" + tipoPantalla;
+        // TODO: Implementar este método para devolver los detalles de la televisión.
+        return null; // Retornar null temporalmente.
     }
 
     @Override
-    //a un producto electronico se le puede aplicar un descuento de hasta el 20%
     public boolean aplicarDescuento(double porcentaje) {
-        if (super.aplicarDescuento(porcentaje)){
-            this.setPrecio(this.getPrecio()-this.getPrecio()*(porcentaje/100));
-            return true;
-         }
-         else
-             return false;  
+        // TODO: Implementar la lógica para aplicar un descuento de hasta el 20%.
+        return false; // Retornar false temporalmente.
     }
-
-    
 
     @Override
     public String toString() {
-        return super.toString()+"," + tamanio + "," + resolucion + "," + tipoPantalla;
+        // TODO: Implementar este método para devolver una representación en texto de la televisión.
+        return null; // Retornar null temporalmente.
     }
 
     @Override
     public boolean esVendible() {
-        return true; //este producto es vendible al público
+        // TODO: Implementar la lógica para determinar si la televisión es vendible.
+        return false; // Retornar false temporalmente.
     }
 
     @Override
     public String toArchivo() {
-        return super.toArchivo() + "," +
-            getTamanio() + "," +
-            getResolucion() + "," +
-            getTipoPantalla();
+        // TODO: Implementar este método para devolver una representación en texto para guardar en un archivo.
+        return null; // Retornar null temporalmente.
     }
-    
-    
-    
 }

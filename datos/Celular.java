@@ -94,24 +94,12 @@ public class Celular extends ProductoElectronico {
         return super.getFamilia();
     }
 
-    //sobreescritura del metodo obtenerDetalles de la clase ProductoElectronico y
+    //TODO:sobreescritura del metodo obtenerDetalles de la clase ProductoElectronico y
     //agregando los atributos numCamaras, sistemaOperativo, capacidadAlmacenamiento, ram y tipoPantalla
-    @Override
-    public String obtenerDetalles() {
-        return super.obtenerDetalles()+"Celular [capacidadAlmacenamiento=" + capacidadAlmacenamiento + ", numCamaras=" + numCamaras + ", ram=" + ram + ", sistemaOperativo=" + sistemaOperativo + ", tipoPantalla=" + tipoPantalla + "]";
-    }
+    
 
-    @Override
-    //se le puede aplicar un descuento de hasta el 20%
-    public boolean aplicarDescuento(double porcentaje) {
-        if (super.aplicarDescuento(porcentaje)){
-           this.setPrecio(this.getPrecio()-this.getPrecio()*(porcentaje/100));
-           return true;
-        }
-        else
-            return false;  
-         
-    }
+     // TODO: Implementar el método aplicarDescuento para validar descuentos de hasta el 20%.
+   
 
     @Override
     public String toString() {
