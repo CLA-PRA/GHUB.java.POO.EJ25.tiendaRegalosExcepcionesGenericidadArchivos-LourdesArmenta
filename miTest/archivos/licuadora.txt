@@ -1,0 +1,2 @@
+LIC-1,Oster Pro 1200,79.99,Licuadora de alto rendimiento,ProductoElectrodomsticos,Oster,BLSTMB-CBG-000,Negro,24,110V,1200,6
+LIC-2,Ninja Professional,99.99,Licuadora profesional con múltiples velocidades,ProductoElectrodomesticos,Ninja,BL610,Plata,36,220V,1000,9

@@ -1,0 +1,2 @@
+TOS-1,Tostadora Philips,49.99,Tostadora con ranuras anchas para todo tipo de pan,ProductoElectrodomestico,Philips,HD2581/00,Blanco,24,800W,1
+TOS-2,Tostadora Oster,39.99,Tostadora con control de tostado ajustable,ProductoElectrodomestico,Oster,TSSTTRJBG1,Negro,12,900W,2

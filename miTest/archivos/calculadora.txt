@@ -1,0 +1,2 @@
+CAL-1,Calculadora Científica Casio,29.99,Calculadora científica con funciones avanzadas,ProductoElectronico,Casio,FX-991EX,Negro,24,3V,Cientifica
+CAL-2,Calculadora Gráfica Texas Instruments,99.99,Calculadora gráfica con pantalla a color,ProductoElectronico,Texas Instruments,TI-84 Plus CE,Plata,36,2V,Financiera

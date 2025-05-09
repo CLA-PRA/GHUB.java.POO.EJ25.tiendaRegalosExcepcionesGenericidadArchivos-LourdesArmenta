@@ -1,0 +1,2 @@
+PRO-1,Camiseta Nike,29.99,Camiseta deportiva de alta calidad,ProductoPromocional,L,Rojo
+PRO-2,Camiseta Adidas,24.99,Camiseta casual para uso diario,ProductoPromocional,M,Azul

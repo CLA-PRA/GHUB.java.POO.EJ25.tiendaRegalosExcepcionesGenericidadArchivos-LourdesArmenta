@@ -1,0 +1,3 @@
+LIB-3,Cien Años de Soledad,19.99,Descripción de prueba,ProductoLiterario,Gabriel Garcia Marquez,Editorial,1967,Realismo mágico,500,978-84-376-0494-7
+LIB-2,1984,13.5,Descripción de prueba,ProductoLiterario,George Orwell,Editorial,1949,Distopía,328,978-0-452-28423-4
+LIB-1,Cien Años de Soledad,19.99,Descripción de prueba,ProductoLiterario,Gabriel Garcia Marquez,Editorial,1967,Realismo mágico,500,978-84-376-0494-7
